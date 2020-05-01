@@ -1,0 +1,17 @@
+{% if messages %}
+{% for message in messages  %}
+
+<p style='color:green;'  >{{message}}  </P>
+
+
+{% endfor %}
+{% endif %}
+
+
+<form method='Post' action='?'>
+{% csrf_token %}
+{{form.as_p}}
+
+<button type='submit' > submit </button>
+
+</form>
